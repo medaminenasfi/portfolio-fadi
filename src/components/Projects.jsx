@@ -1,18 +1,8 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
-import { FaGlobe, FaMobile, FaCode } from 'react-icons/fa';
+import React, { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate } from "react-router-dom";
+import { FaGlobe, FaMobile, FaCode } from "react-icons/fa";
 import ScrollDown from './ScrollDown';
-import profileImg from '../assets/Screenshot from 2025-07-19 18-44-01.png';
-import Eco from '../assets/ec.png';
-import xml from '../assets/xml.webp';
-import comme from '../assets/ecommerce-online-shopping-vector-illustration_677179-93.webp';
-import back from '../assets/Gemini_Generated_Image_hfkfoghfkfoghfkf.png';
-import wallet from '../assets/wallet.png'
-import bmi from '../assets/bmi.png'
-import wea from '../assets/wea.png'
-
- 
 
 const ProjectCard = ({ project, onClick }) => (
   <motion.div 
@@ -52,12 +42,14 @@ const ProjectCard = ({ project, onClick }) => (
       transition={{ type: "spring", stiffness: 400 }}
     >
       <span className={`px-3 py-1.5 rounded-full text-xs font-bold flex items-center gap-2 shadow-lg backdrop-blur-sm ${
-        project.category === 'web' 
+        project.category === 'ai' 
+          ? 'bg-purple-500/90 text-white ring-2 ring-purple-300/50' 
+          : project.category === 'web' 
           ? 'bg-blue-500/90 text-white ring-2 ring-blue-300/50' 
           : 'bg-green-500/90 text-white ring-2 ring-green-300/50'
       }`}>
-        {project.category === 'web' ? <FaGlobe className="w-3 h-3" /> : <FaMobile className="w-3 h-3" />}
-        {project.category === 'web' ? 'Web' : 'Mobile'}
+        {project.category === 'ai' ? <FaCode className="w-3 h-3" /> : project.category === 'web' ? <FaGlobe className="w-3 h-3" /> : <FaMobile className="w-3 h-3" />}
+        {project.category === 'ai' ? 'AI/ML' : project.category === 'web' ? 'Web' : 'Mobile'}
       </span>
     </motion.div>
     
@@ -118,6 +110,63 @@ const Projects = () => {
   const [activeCategory, setActiveCategory] = useState('all');
   
   const projects = [
+    // AI/ML Projects
+    {
+      id: 'driver-drowsiness-detection',
+      title: "Driver Drowsiness Detection",
+      description: "Machine learning and deep learning project for detecting driver drowsiness using multiple models including Random Forest, SVM, XGBoost, DNN, CNN, and LSTM.",
+      technologies: ["Machine Learning", "Deep Learning", "Random Forest", "SVM", "XGBoost", "DNN", "CNN", "LSTM"],
+      link: "#",
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=AI+Project",
+      category: 'ai',
+      features: [
+        "Multi-modal data analysis",
+        "Comparison of ML and DL models",
+        "Performance evaluation on accuracy and feasibility",
+        "Real-time detection capabilities",
+        "Model optimization for deployment"
+      ],
+      challenges: "Selecting optimal models based on accuracy and computational feasibility",
+      github: "#"
+    },
+    {
+      id: 'heart-failure-prediction',
+      title: "Heart Failure Prediction",
+      description: "Complete machine learning pipeline for predicting heart failure using real medical data, featuring EDA, data preparation, and model training.",
+      technologies: ["AI/Machine Learning", "Python", "NumPy", "Pandas", "Scikit-learn", "Data Analysis"],
+      link: "#",
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=AI+Project",
+      category: 'ai',
+      features: [
+        "Complete ML pipeline development",
+        "Exploratory Data Analysis (EDA)",
+        "Data preprocessing and preparation",
+        "Multiple classification models",
+        "Model selection and optimization",
+        "Real medical dataset analysis"
+      ],
+      challenges: "Working with sensitive medical data and ensuring model reliability",
+      github: "#"
+    },
+    {
+      id: 'federated-learning-security',
+      title: "Federated Learning Security",
+      description: "Implementation and analysis of backdoor attacks on CNN in Federated Learning using Fashion-MNIST dataset, with evaluation of defense mechanisms.",
+      technologies: ["Deep Learning", "Federated Learning", "CNN", "PyTorch", "Security", "Fashion-MNIST"],
+      link: "#",
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=AI+Project",
+      category: 'ai',
+      features: [
+        "Backdoor attack implementation",
+        "CNN in Federated Learning setup",
+        "Fashion-MNIST dataset integration",
+        "Statistical defense mechanisms",
+        "Security vulnerability analysis",
+        "Performance impact evaluation"
+      ],
+      challenges: "Implementing sophisticated attacks and evaluating defense mechanisms from literature",
+      github: "#"
+    },
     // Web Projects
     {
       id: 'backend-ecommerce',
@@ -125,7 +174,7 @@ const Projects = () => {
       description: "A complete e-commerce backend API built with TypeScript, featuring user authentication, product management, order processing, and payment integration.",
       technologies: ["Node.js", "TypeScript", "MongoDB", "Express.js", "JWT", "Stripe API", "Bcrypt"],
       link: "https://github.com/medaminenasfi/E-commerce/tree/main/backend",
-      image: back,
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=E-commerce",
       category: 'web',
       features: [
         "User Authentication & Authorization",
@@ -145,7 +194,7 @@ const Projects = () => {
       description: "A comprehensive digital platform promoting eco-tourism and sustainable travel experiences in Tunisia with booking system and interactive maps.",
       technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Leaflet", "Socket.io"],
       link: "https://ecotourisme.laghazala.tn/",
-      image: Eco,
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=Eco+Tourism",
       category: 'web',
       features: [
         "Interactive Tourism Maps",
@@ -165,7 +214,7 @@ const Projects = () => {
       description: "Advanced application for converting Excel files and SQL queries to XML format with custom schema validation and batch processing.",
       technologies: ["React.js", "Node.js", "Excel API", "XML Parser", "Multer", "Joi"],
       link: "#",
-      image: xml,
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=XML+Generator",
       category: 'web',
       features: [
         "Excel to XML Conversion",
@@ -185,7 +234,7 @@ const Projects = () => {
       description: "Modern full-stack e-commerce platform specializing in clothing for all age groups with advanced filtering and recommendation system.",
       technologies: ["React.js", "Node.js", "MongoDB", "Redux", "Tailwind CSS", "Cloudinary"],
       link: "#",
-      image: comme,
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=Glooms+E-commerce",
       category: 'web',
       features: [
         "Product Catalog with Filters",
@@ -205,7 +254,7 @@ const Projects = () => {
       description: "Innovative web application that converts algorithmic pseudocode into actual programming code across multiple languages.",
       technologies: ["HTML", "CSS", "JavaScript", "Prism.js", "Monaco Editor", "Regex"],
       link: "#",
-      image: profileImg,
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=AI+Project",
       category: 'web',
       features: [
         "Multi-language Code Generation",
@@ -220,68 +269,67 @@ const Projects = () => {
       github: "https://github.com/medaminenasfi/traducode"
     },
     // Mobile Projects
-{
-  id: 'bmi-calculator',
-  title: "BMI Calculator",
-  description: "A simple and elegant Body Mass Index (BMI) Calculator built using Flutter and Dart. This app allows users to calculate their BMI based on height and weight, providing instant insights about their health category.",
-  technologies: ["Flutter", "Dart", "Material Design"],
-  link: "#",
-  image: bmi ,
-  category: 'mobile',
-  features: [
-    "Easy BMI Calculation",
-    "Supports Metric Units (kg, cm)",
-    "Displays Health Categories: Underweight, Normal, Overweight, Obese",
-    "Clean and Responsive UI"
-  ],
-  challenges: "Ensuring accuracy in BMI calculation and maintaining a clean responsive layout",
-  github: "https://github.com/medaminenasfi/BMI-Calculator"
-},
-{
-  id: 'portefeuille-flutter',
-  title: "Digital Wallet Flutter App",
-  description: "This Flutter application simulates a digital wallet with two main functionalities: a currency converter and a monthly budget simulator. It allows users to manage their finances in a simple and intuitive way.",
-  technologies: ["Flutter", "Dart", "Material Design"],
-  link: "#",
-  image: wallet,
-  category: 'mobile',
-  features: [
-    "Currency converter with fixed rates",
-    "Monthly budget simulator",
-    "Display remaining balance after expenses",
-    "Simple and smooth navigation",
-    "User-friendly interface without external API"
-  ],
-  challenges: "Designing a smooth and intuitive interface with reliable calculations",
-  github: "https://github.com/medaminenasfi/portefeuille-numerique"
-}
-,
-  {
-  id: 'weather-app',
-  title: "Weather Forecast App (Ongoing)",
-  description: "An elegant Flutter application currently under development, providing real-time weather updates and detailed forecasts with a focus on UI animations and performance.",
-  technologies: ["Flutter", "Dart", "REST API", "Geolocator", "Weather API", "Animations"],
-  link: "#",
-  image: wea,
-  category: 'mobile',
-  features: [
-    "Real-time Weather Data (in progress)",
-    "7-Day Forecast (in progress)",
-    "Location-based Weather Detection",
-    "Weather Maps & Radar (planned)",
-    "Severe Weather Alerts (planned)",
-    "Multiple City Support",
-    "Smooth UI Animations"
-  ],
-  status: "In Development",
-  challenges: "Integrating live APIs and optimizing animation performance while managing location permissions.",
-  github: "https://github.com/medaminenasfi/flutter-weather"
-}
-
+    {
+      id: 'bmi-calculator',
+      title: "BMI Calculator",
+      description: "A simple and elegant Body Mass Index (BMI) Calculator built using Flutter and Dart. This app allows users to calculate their BMI based on height and weight, providing instant insights about their health category.",
+      technologies: ["Flutter", "Dart", "Material Design"],
+      link: "#",
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=BMI+Calculator",
+      category: 'mobile',
+      features: [
+        "Easy BMI Calculation",
+        "Supports Metric Units (kg, cm)",
+        "Displays Health Categories: Underweight, Normal, Overweight, Obese",
+        "Clean and Responsive UI"
+      ],
+      challenges: "Ensuring accuracy in BMI calculation and maintaining a clean responsive layout",
+      github: "https://github.com/medaminenasfi/BMI-Calculator"
+    },
+    {
+      id: 'portefeuille-flutter',
+      title: "Digital Wallet Flutter App",
+      description: "This Flutter application simulates a digital wallet with two main functionalities: a currency converter and a monthly budget simulator. It allows users to manage their finances in a simple and intuitive way.",
+      technologies: ["Flutter", "Dart", "Material Design"],
+      link: "#",
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=Digital+Wallet",
+      category: 'mobile',
+      features: [
+        "Currency converter with fixed rates",
+        "Monthly budget simulator",
+        "Display remaining balance after expenses",
+        "Simple and smooth navigation",
+        "User-friendly interface without external API"
+      ],
+      challenges: "Designing a smooth and intuitive interface with reliable calculations",
+      github: "https://github.com/medaminenasfi/portefeuille-numerique"
+    },
+    {
+      id: 'weather-app',
+      title: "Weather Forecast App (Ongoing)",
+      description: "An elegant Flutter application currently under development, providing real-time weather updates and detailed forecasts with a focus on UI animations and performance.",
+      technologies: ["Flutter", "Dart", "REST API", "Geolocator", "Weather API", "Animations"],
+      link: "#",
+      image: "https://via.placeholder.com/400x300/1e293b/ffffff?text=Weather+App",
+      category: 'mobile',
+      features: [
+        "Real-time Weather Data (in progress)",
+        "7-Day Forecast (in progress)",
+        "Location-based Weather Detection",
+        "Weather Maps & Radar (planned)",
+        "Severe Weather Alerts (planned)",
+        "Multiple City Support",
+        "Smooth UI Animations"
+      ],
+      status: "In Development",
+      challenges: "Integrating live APIs and optimizing animation performance while managing location permissions.",
+      github: "https://github.com/medaminenasfi/flutter-weather"
+    }
   ];
 
   const categories = [
     { id: 'all', label: 'All Projects', icon: <FaCode className="w-4 h-4" /> },
+    { id: 'ai', label: 'AI & Machine Learning', icon: <FaCode className="w-4 h-4" /> },
     { id: 'web', label: 'Web Development', icon: <FaGlobe className="w-4 h-4" /> },
     { id: 'mobile', label: 'Mobile Development', icon: <FaMobile className="w-4 h-4" /> }
   ];

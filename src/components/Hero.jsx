@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
   const [typedRole, setTypedRole] = useState('');
-  const roles = ['Full-Stack Developer', 'Flutter Developer', 'Problem Solver'];
+  const roles = ['AI & Data Engineer', 'Machine Learning Developer', 'Full-Stack Developer'];
   const [roleIndex, setRoleIndex] = useState(0);
 
   useEffect(() => {
@@ -68,10 +68,10 @@ const Hero = () => {
           }}
         >{`
 const hero = {
-  name: "Mohamed Amine Nasfi",
-  role: "Full-Stack Developer",
-  stack: ["MongoDB", "Express.js", "React", "Node.js"],
-  focus: "Building responsive and user-friendly web applications",
+  name: "Fadi Farhat",
+  role: "AI & Data Engineer",
+  stack: ["Python", "TensorFlow", "React", "Node.js"],
+  focus: "Building intelligent AI systems and data-driven solutions",
   contact: "#contact",
   projects: "#projects"
 };
@@ -113,8 +113,8 @@ console.log("Building amazing web experiences...");
           >
             <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center">
               <img
-                src={require('../assets/photo.png')}
-                alt="Mohamed Amine Nasfi"
+                src={require('../assets/b76c5484-e5de-4923-b281-bf309160d914.jpg')}
+                alt="Fadi Farhat"
                 className="w-full h-full object-cover rounded-full"
                 onError={(e) => {
                   console.log('Image failed to load');
@@ -142,7 +142,7 @@ console.log("Building amazing web experiences...");
               variants={itemVariants}
               className="text-white text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-extrabold mb-1 sm:mb-2 drop-shadow-lg font-mono leading-tight break-words w-full"
             >
-              Mohamed Amine Nasfi
+              Fadi Farhat
             </motion.h1>
             <motion.h2 
               variants={itemVariants}
@@ -161,7 +161,7 @@ console.log("Building amazing web experiences...");
               variants={itemVariants}
               className="max-w-full text-textSecondary text-xs sm:text-sm md:text-base lg:text-lg mb-4 sm:mb-6 leading-relaxed font-mono w-full break-words"
             >
-              I'm a full-stack developer specializing in the <span className="text-secondary font-semibold">MERN stack</span> and <span className="text-secondary font-semibold">Flutter</span>. Currently, I'm focused on building <span className="text-secondary font-semibold">responsive web applications</span> and <span className="text-secondary font-semibold">cross-platform mobile apps</span>.
+              I'm an AI & Data Engineering student specializing in intelligent systems and data analysis. Currently focused on building <span className="text-secondary font-semibold">machine learning models</span> and <span className="text-secondary font-semibold">data-driven solutions</span> for complex problems.
             </motion.p>
             <motion.div 
               variants={itemVariants}
@@ -182,8 +182,8 @@ console.log("Building amazing web experiences...");
 
               {/* Download CV Button */}
               <motion.a
-                href={require('../assets/Mohamed_Amine_Nasfi_CV_FullStackDeveloper.pdf')}
-                download="Mohamed_Amine_Nasfi_CV_FullStackDeveloper.pdf"
+                href={require('../assets/galouta_260219_213252.pdf')}
+                download="Fadi_Farhat_CV_AI_Data_Engineer.pdf"
                 className="relative px-3 sm:px-4 md:px-5 py-2.5 bg-gradient-to-r from-cyan-500 to-teal-500 text-white font-semibold text-xs sm:text-sm md:text-base rounded-lg shadow-lg hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] transition-all duration-300 flex items-center justify-center gap-2 whitespace-nowrap overflow-hidden group"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -237,19 +237,17 @@ console.log("Building amazing web experiences...");
                 </motion.div>
               </motion.a>
 
-              {/* Hire Me Button */}
+              {/* Contact Button */}
               <motion.a
-                href="https://www.upwork.com/freelancers/~017cad0a2a355873b2?mp_source=share"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-3 sm:px-4 md:px-5 py-3 border-2 border-green-400 text-green-400 font-semibold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 hover:bg-green-400/10 hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] flex items-center justify-center gap-2 whitespace-nowrap overflow-visible min-h-[44px] flex-shrink-0"
+                href="#contact"
+                className="px-3 sm:px-4 md:px-5 py-2.5 border-2 border-green-400 text-green-400 font-semibold text-xs sm:text-sm md:text-base rounded-lg transition-all duration-300 hover:bg-green-400/10 hover:shadow-[0_0_20px_rgba(34,197,94,0.3)] flex items-center justify-center gap-2 whitespace-nowrap overflow-visible min-h-[44px] flex-shrink-0"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3.002-2.439-5.453-5.439-5.453z"/>
+                <svg className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Hire Me
+                Contact Me
               </motion.a>
             </motion.div>
             
@@ -265,7 +263,7 @@ console.log("Building amazing web experiences...");
                 transition={{ duration: 2, repeat: Infinity }}
                 className="w-2 h-2 sm:w-2.5 sm:h-2.5 bg-green-400 rounded-full shadow-[0_0_10px_rgba(34,197,94,0.6)] flex-shrink-0"
               />
-              <span className="text-green-400 font-semibold text-xs sm:text-sm font-mono text-center md:text-left">Available for Freelance Projects</span>
+              <span className="text-green-400 font-semibold text-xs sm:text-sm font-mono text-center md:text-left">Looking for 2-year apprenticeship starting September 2026</span>
               <motion.span
                 animate={{ rotate: 360 }}
                 transition={{ duration: 3, repeat: Infinity, ease: "linear" }}

@@ -24,30 +24,34 @@ const EducationCard = ({ degree, school, period, location, description }) => (
 const Education = () => {
   const education = [
     {
-      degree: "Bachelor's degree in Business Intelligence",
-      school: "Higher School of Applied Sciences and Technology",
-      location: "Gabes, Tunisia",
-      period: "2022 - 2025",
-      description: "Graduated with a degree in Business Information Systems, specialized in full-stack development."
+      degree: "Engineering Cycle in Digital Systems – AI & New Technologies",
+      school: "University of Technology of Troyes (UTT)",
+      location: "Troyes, France",
+      period: "2025 – 2028",
+      description: "First-year engineering student specializing in Digital Systems, AI, and Data. Looking for 2-year apprenticeship starting September 2026."
+    },
+    {
+      degree: "BUT in Electrical Engineering and Industrial Computing",
+      school: "IUT Henri Poincaré Longwy",
+      location: "Longwy, France",
+      period: "2020 – 2022",
+      description: "Completed with honors. Focus on electrical engineering and industrial computing systems."
     },
     {
       degree: "Scientific Baccalaureate",
-      school: "Abou Loubaba-Gabès High School",
-      location: "Gabes, Tunisia",
-      period: "2021 - 2022",
-      description: "Completed scientific track with focus on mathematics and sciences."
+      school: "Lycée Pilote de Gabès",
+      location: "Gabès, Tunisia",
+      period: "2020",
+      description: "Completed with Very Good honors. Scientific track with advanced mathematics and physics."
     }
   ];
 
   const certifications = [
-    "English Certification | TOEFL iBT (B2 Level)",
-    "French Certification | TCF TP (B2 Level)",
-    "Web Development Training with HTML, CSS, JavaScript | Coursera",
-    "Introduction to Java Training | Coursera",
-    "Training in Design of User Interfaces and Experiences (UI/UX) | Coursera",
-    "React Basics Training | Coursera",
-    "Soft Skills Training | We Youth Organization",
-    "Google Developer Groups Training | DevFest"
+    "Introduction to Artificial Intelligence – University of Helsinki (In Progress)",
+    "Azure AZ-204 – Developing Solutions",
+    "The Web Developer Bootcamp (Full-Stack) – Udemy",
+    "JavaScript Programming – Udemy",
+    "C# Video Game Programming – GOMYCODE"
   ];
 
   return (

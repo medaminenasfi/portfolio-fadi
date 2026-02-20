@@ -7,65 +7,37 @@ const Experience = () => {
 
   const experiences = [
     {
-      company: "Freelance",
-      positions: [
-            {
-          title: "Full Stack Web Developer - Club Rendement+",
-          date: "01/2026 - Present ",
-          location: "Remote",
-          duties: [
-            "Designed and structured a real-estate investment platform for high-yield rental opportunities in Tunisia",
-            "Defined product vision and MVP roadmap (V1 → V2) with investor-focused user journeys",
-            "Built scalable frontend architecture (Landing, Investor Profile, Journal, Community)",
-            "Developed backend logic for roles, leads, and admin dashboard functionality",
-          ],
-        },
-        {
-          title: "Full Stack Web Developer - Advanced Implant Services (AIS)",
-          date: "12/2025",
-          location: "Remote",
-          duties: [
-            "Designed and structured official website for AIS, exclusive OSSTEM Implant representative in Tunisia",
-            "Created high-credibility medical UX with complex product catalogs (implants, digital solutions, equipment)",
-            "Integrated scientific and technical content from OSSTEM France into clear digital experience",
-            "Designed conversion flows for quotes, contact, and product discovery for medical professionals",
-          ],
-        },
-    
-      ],
-    },
-    {
-      company: "Laghazala du Désert",
+      company: "Regulux",
       positions: [
         {
-          title: "Full Stack Developer (PFE Internship)",
-          date: "02/2025 - 06/2025",
-          location: "Gabes, Tunisia",
+          title: "IT & Development Intern",
+          date: "03/2025 – 06/2025",
+          location: "Luxembourg",
           duties: [
-            "Developed a web platform for managing eco-friendly hiking tours in Tunisia",
-            "Integrated interactive maps with Leaflet, weather filtering, reservations, and guide/artisan spaces",
-            "Built application using React.js, Node.js, Express.js, MongoDB, JWT, SSL, and Postman",
+            "Network & security: configuration and securing network connections",
+            "System administration: server maintenance, user management, and application deployment",
+            "Mobile development (Python): functional and UI improvements to existing application",
+            "Web development: designed GTB/GTC interface for real-time visualization and control",
           ],
         },
       ],
     },
     {
-      company: "Tunisian Chemical Group",
+      company: "UPAG",
       positions: [
         {
-          title: "Web Developer",
-          date: "07/2024 - 08/2024",
-          location: "Tunisia",
+          title: "Full-Stack Developer Intern",
+          date: "04/2024 – 07/2024",
+          location: "France",
           duties: [
-            "Developed a modern e-commerce platform using React.js",
-            "Created an XML generator from Excel files, web forms, and SQL queries",
-            "Developed a user-friendly web interface for data entry and XML conversion",
-            "Collaborated with design team on UI/UX improvements",
+            "Front-end: responsive integration with Tailwind CSS",
+            "Back-end: designed and secured APIs tested via Postman",
+            "Email management via SMTP2GO",
+            "CI/CD: automated pipelines with Jenkins",
           ],
         },
       ],
     },
-
   ];
 
   const containerVariants = {

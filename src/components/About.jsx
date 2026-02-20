@@ -41,22 +41,13 @@ const About = () => {
           {/* Text Content */}
           <motion.div className="space-y-6" variants={itemVariants}>
             <p className="text-textSecondary leading-relaxed">
-              Hello! I'm Mohamed Amine, a passionate Full-Stack Developer with a
-              bachelor's degree in Business Information Systems, specialized in
-              Business Intelligence. My journey in web development began with a
-              deep curiosity about how websites work a curiosity that has
-              evolved into a focused and professional career.{" "}
+              Hello! I'm Fadi Farhat, a first-year engineering student at UTT Troyes specializing in Digital Systems, AI, and Data. My journey in artificial intelligence began with a deep fascination for intelligent systems—a fascination that has evolved into a focused academic and professional pursuit.
             </p>
             <p className="text-textSecondary leading-relaxed">
-              I specialize in building exceptional digital experiences using the
-              MERN stack (MongoDB, Express.js, React, Node.js). I’m committed to
-              creating efficient, scalable, and user-friendly applications that
-              address real-world challenges.
+              I specialize in building intelligent AI solutions using machine learning, deep learning, and data analysis. I'm committed to creating innovative models and systems that address complex real-world challenges in areas like healthcare, security, and predictive analytics.
             </p>
             <p className="text-textSecondary leading-relaxed">
-              I'm currently seeking opportunities to contribute my skills in a
-              dynamic professional environment  whether in front-end, back-end,
-              or full-stack development roles.
+              I'm currently seeking a 2-year apprenticeship starting September 2026 to contribute my skills in AI/ML and data engineering while gaining valuable industry experience in a dynamic professional environment.
             </p>
           </motion.div>
 
@@ -73,14 +64,14 @@ const About = () => {
               </h3>
               <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 {[
-                  "JavaScript (ES6+)",
-                  "Next.js",
-                  "Node.js",
-                  "MongoDB",
-                  "Express.js",
-                  "TypeScript",
-                  "Tailwind CSS",
+                  "Python",
+                  "TensorFlow",
+                  "Scikit-learn",
+                  "NumPy & Pandas",
+                  "React & Node.js",
+                  "SQL & MySQL",
                   "Git & GitHub",
+                  "Azure Cloud",
                 ].map((tech, index) => (
                   <motion.div
                     key={index}

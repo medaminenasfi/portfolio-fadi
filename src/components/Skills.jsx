@@ -2,19 +2,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import ScrollDown from "./ScrollDown";
 import { FaCode, FaServer, FaDatabase, FaTools, FaMobile, FaCloud } from "react-icons/fa";
-import expressLogo from "../assets/expressjs.svg";
-import api from "../assets/apipng.png";
-import jwt from "../assets/jwt.png";
-import node from "../assets/n2-2.webp";
-import met from "../assets/met.png";
-import web from "../assets/web.png";
-import lite from "../assets/Sqlite-square-icon.svg.png";
-import dev from "../assets/dev-removebg-preview.png";
-import post from "../assets/postman-icon.svg";
-import action from "../assets/github-actions-logo-png_seeklogo-428028.png";
-import nginx from "../assets/3030173.webp";
-import AWS from "../assets/Amazon_Web_Services_Logo.svg.png";
-import VPS from "../assets/8047704.png";
 
 
 const SkillCard = ({ title, icon, level }) => {
@@ -208,8 +195,8 @@ const SkillCard = ({ title, icon, level }) => {
 const categoryMeta = [
   {
     icon: <FaCode className="w-5 h-5 mr-2" />,
-    label: "Frontend",
-    description: "Building beautiful, interactive user interfaces."
+    label: "AI & Data Science",
+    description: "Machine learning, deep learning, and data analysis technologies."
   },
   {
     icon: <FaServer className="w-5 h-5 mr-2" />,
@@ -223,8 +210,8 @@ const categoryMeta = [
   },
   {
     icon: <FaMobile className="w-5 h-5 mr-2" />,
-    label: "Mobile",
-    description: "Cross-platform mobile app development."
+    label: "Frontend",
+    description: "Building beautiful, interactive user interfaces."
   },
   {
     icon: <FaTools className="w-5 h-5 mr-2" />,
@@ -233,8 +220,8 @@ const categoryMeta = [
   },
   {
     icon: <FaCloud className="w-5 h-5 mr-2" />,
-    label: "DevOps & Cloud",
-    description: "Containerization, orchestration, and cloud infrastructure."
+    label: "Cloud & DevOps",
+    description: "Cloud platforms and deployment automation."
   },
 ];
 
@@ -289,54 +276,82 @@ const Skills = () => {
 
   const skillCategories = [
     {
+      category: "AI & Data Science",
+      skills: [
+        {
+          title: "Python",
+          icon: "https://cdn.svgporn.com/logos/python.svg",
+          level: 90,
+        },
+        {
+          title: "TensorFlow",
+          icon: "https://cdn.svgporn.com/logos/tensorflow.svg",
+          level: 85,
+        },
+        {
+          title: "Scikit-learn",
+          icon: "https://cdn.svgporn.com/logos/scikit-learn.svg",
+          level: 88,
+        },
+        {
+          title: "NumPy",
+          icon: "https://cdn.svgporn.com/logos/numpy.svg",
+          level: 90,
+        },
+        {
+          title: "Pandas",
+          icon: "https://cdn.svgporn.com/logos/pandas.svg",
+          level: 90,
+        },
+        {
+          title: "Matplotlib",
+          icon: "https://cdn.svgporn.com/logos/matplotlib.svg",
+          level: 85,
+        },
+        {
+          title: "Seaborn",
+          icon: "https://cdn.svgporn.com/logos/seaborn.svg",
+          level: 85,
+        },
+        {
+          title: "Jupyter",
+          icon: "https://cdn.svgporn.com/logos/jupyter.svg",
+          level: 88,
+        },
+        {
+          title: "PyTorch",
+          icon: "https://cdn.svgporn.com/logos/pytorch.svg",
+          level: 80,
+        },
+      ],
+    },
+    {
       category: "Frontend",
       skills: [
         {
+          title: "React",
+          icon: "https://cdn.svgporn.com/logos/react.svg",
+          level: 85,
+        },
+        {
+          title: "JavaScript",
+          icon: "https://cdn.svgporn.com/logos/javascript.svg",
+          level: 88,
+        },
+        {
           title: "HTML5",
           icon: "https://cdn.svgporn.com/logos/html-5.svg",
-          level: 95,
+          level: 90,
         },
         {
           title: "CSS3",
           icon: "https://cdn.svgporn.com/logos/css-3.svg",
-          level: 90,
-        },
-      
-        {
-          title: "React",
-          icon: "https://cdn.svgporn.com/logos/react.svg",
-          level: 90,
-        },
-              {
-          title: "Next.js",
-          icon: "https://cdn.svgporn.com/logos/nextjs-icon.svg",
           level: 85,
         },
-          {
-          title: "JavaScript",
-          icon: "https://cdn.svgporn.com/logos/javascript.svg",
-          level: 90,
-        },
-        {
-          title: "TypeScript",
-          icon: "https://cdn.svgporn.com/logos/typescript-icon.svg",
-          level: 60,
-        },
-  
         {
           title: "Tailwind",
           icon: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
           level: 85,
-        },
-        {
-          title: "Bootstrap",
-          icon: "https://cdn.svgporn.com/logos/bootstrap.svg",
-          level: 88,
-        },
-        {
-          title: "Leaflet.js",
-          icon: "https://leafletjs.com/docs/images/logo.png",
-          level: 90,
         },
       ],
     },
@@ -350,59 +365,28 @@ const Skills = () => {
         },
         {
           title: "Express.js",
-          icon: expressLogo,
+          icon: "https://cdn.svgporn.com/logos/express.svg",
           level: 85,
-        },
-            {
-          title: "PHP",
-          icon: "https://cdn.svgporn.com/logos/php.svg",
-          level: 80,
         },
         {
           title: "Python",
           icon: "https://cdn.svgporn.com/logos/python.svg",
-          level: 75,
+          level: 90,
         },
-    
         {
           title: "Java",
           icon: "https://cdn.svgporn.com/logos/java.svg",
           level: 75,
         },
         {
-          title: "Next.js API",
-          icon: "https://cdn.svgporn.com/logos/nextjs-icon.svg",
-          level: 80,
+          title: "C",
+          icon: "https://cdn.svgporn.com/logos/c.svg",
+          level: 70,
         },
         {
-          title: "RESTful API",
-          icon: api,
-          level: 90,
-        },
-        {
-          title: "JWT Auth",
-          icon: jwt,
-          level: 85,
-        },
-        {
-          title: "Nodemailer",
-          icon: node ,
-          level: 80,
-        },
-              {
-          title: "AI API Integrations",
-          icon: "https://cdn.svgporn.com/logos/openai-icon.svg",
-          level: 80,
-        },
-        {
-          title: "Meteo / Weather APIs",
-          icon: met,
-          level: 80,
-        },
-            {
-          title: "Webhooks",
-          icon: web,
-          level: 80,
+          title: "C++",
+          icon: "https://cdn.svgporn.com/logos/c-plusplus.svg",
+          level: 70,
         },
       ],
     },
@@ -410,8 +394,8 @@ const Skills = () => {
       category: "Database",
       skills: [
         {
-          title: "MongoDB",
-          icon: "https://cdn.svgporn.com/logos/mongodb-icon.svg",
+          title: "SQL",
+          icon: "https://cdn.svgporn.com/logos/mysql.svg",
           level: 85,
         },
         {
@@ -420,37 +404,15 @@ const Skills = () => {
           level: 80,
         },
         {
-          title: "PostgreSQL",
-          icon: "https://cdn.svgporn.com/logos/postgresql.svg",
+          title: "MariaDB",
+          icon: "https://cdn.svgporn.com/logos/mariadb.svg",
           level: 75,
         },
-          {
-          title: "SQLite",
-          icon: lite,
-          level: 95,
-        },
-      ],
-    },
-    {
-      category: "Mobile",
-      skills: [
         {
-          title: "Flutter",
-          icon: "https://cdn.svgporn.com/logos/flutter.svg",
+          title: "SQLite",
+          icon: "https://cdn.svgporn.com/logos/sqlite.svg",
           level: 85,
         },
-        {
-          title: "Dart",
-          icon: "https://cdn.svgporn.com/logos/dart.svg",
-          level: 80,
-        },
-        {
-          title: "Firebase",
-          icon: "https://cdn.svgporn.com/logos/firebase.svg",
-          level: 75,
-        },
-  
-  
       ],
     },
     {
@@ -459,83 +421,57 @@ const Skills = () => {
         {
           title: "Git",
           icon: "https://cdn.svgporn.com/logos/git-icon.svg",
-          level: 85,
-        },
-              {
-          title: "GitHub",
-          icon: "https://cdn.svgporn.com/logos/github-icon.svg",
-          level: 85,
+          level: 90,
         },
         {
-          title: "Figma",
-          icon: "https://cdn.svgporn.com/logos/figma.svg",
-          level: 85,
+          title: "GitHub",
+          icon: "https://cdn.svgporn.com/logos/github-icon.svg",
+          level: 90,
         },
         {
           title: "VS Code",
           icon: "https://cdn.svgporn.com/logos/visual-studio-code.svg",
           level: 90,
         },
-              {
-          title: "Android Studio",
-          icon: "https://cdn.svgporn.com/logos/android-icon.svg",
-          level: 70,
-        },
-        {
-          title: "XAMPP",
-          icon: "https://cdn.svgporn.com/logos/xampp.svg",
-          level: 90,
-        },
-        {
-          title: "Chrome DevTools",
-          icon: dev,
-          level: 90,
-        },
-    
-    
-
         {
           title: "Postman",
-          icon: post,
-          level: 90,
-        },
-    
-
-      ],
-    },
-    {
-      category: "DevOps & Cloud",
-      skills: [
-        {
-          title: "Docker",
-          icon: "https://cdn.svgporn.com/logos/docker-icon.svg",
-          level: 80,
-        },
-    
-        {
-          title: "GitHub Actions",
-          icon: action ,
-          level: 80,
+          icon: "https://cdn.svgporn.com/logos/postman.svg",
+          level: 85,
         },
         {
-          title: "Nginx",
-          icon: nginx,
+          title: "Jenkins",
+          icon: "https://cdn.svgporn.com/logos/jenkins.svg",
           level: 75,
         },
         {
-          title: "Redis",
-          icon: "https://cdn.svgporn.com/logos/redis.svg",
+          title: "Node-RED",
+          icon: "https://cdn.svgporn.com/logos/node-red.svg",
+          level: 70,
+        },
+      ],
+    },
+    {
+      category: "Cloud & DevOps",
+      skills: [
+        {
+          title: "Microsoft Azure",
+          icon: "https://cdn.svgporn.com/logos/microsoft-azure.svg",
+          level: 75,
+        },
+        {
+          title: "Docker",
+          icon: "https://cdn.svgporn.com/logos/docker-icon.svg",
           level: 70,
         },
         {
-          title: "AWS",
-          icon: AWS,
-          level: 70,
+          title: "GitHub Actions",
+          icon: "https://cdn.svgporn.com/logos/github-actions.svg",
+          level: 75,
         },
         {
-          title: "VPS Deployment",
-          icon: VPS,
-          level: 85,
+          title: "JSON",
+          icon: "https://cdn.svgporn.com/logos/json.svg",
+          level: 90,
         },
       ],
     },
