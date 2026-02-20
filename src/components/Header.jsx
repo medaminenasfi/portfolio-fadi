@@ -81,7 +81,7 @@ const Header = () => {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span className="relative z-10 whitespace-nowrap">Mohamed Amine</span>
+            <span className="relative z-10 whitespace-nowrap">fadi Farhat</span>
             <div
               className="absolute -inset-2 bg-secondary/10 rounded-lg -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             />
